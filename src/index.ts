@@ -9,6 +9,8 @@ const PORT: number = +(process.env.PORT || 4000)
 const app: Application = express()
 
 app.use(cors())
+
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.listen(PORT, () => {
